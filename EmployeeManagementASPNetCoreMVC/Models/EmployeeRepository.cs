@@ -27,5 +27,9 @@ namespace EmployeeManagementASPNetCoreMVC.Models
             return employeeList.FirstOrDefault(e => e.Id == id);
         }
 
+        public void InsertEmployee()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
