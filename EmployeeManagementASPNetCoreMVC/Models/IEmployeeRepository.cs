@@ -9,5 +9,6 @@ namespace EmployeeManagementASPNetCoreMVC.Models
     {
         Employee GetById(int id);
         List<Employee> GetAllEmployees();
+
     }
 }
