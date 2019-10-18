@@ -1,7 +1,8 @@
-﻿@model IEnumerable<EmployeeManagementASPNetCoreMVC.Models.Employee>
+﻿@model EmployeeManagementASPNetCoreMVC.Models.Employee
 
 @{
-    ViewData["Title"] = "Employees";
+    ViewData["Title"] = "Details";
+
 }
 
 <h1>@ViewBag.PageTitle</h1>
@@ -29,25 +30,25 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(model => model.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(model => model.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.LastName)
+                @Html.DisplayFor(model => model.LastName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                @Html.DisplayFor(model => model.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateOfBirth)
+                @Html.DisplayFor(model => model.DateOfBirth)
             </td>
             
         </tr>
-}
+
     </tbody>
 </table>

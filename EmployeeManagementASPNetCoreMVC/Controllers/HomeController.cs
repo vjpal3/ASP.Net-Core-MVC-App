@@ -10,9 +10,23 @@ namespace EmployeeManagementASPNetCoreMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEmployeeRepository employeeRepository;
+        public HomeController(IEmployeeRepository empRepo)
+        {
+            employeeRepository = empRepo;
+        }
         public IActionResult Index()
         {
-            return View();
+            var model = employeeRepository.GetAllEmployees();
+            ViewBag.PageTitle = "All Employees";
+            return View(model);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var model = employeeRepository.GetById(id);
+            ViewBag.PageTitle = "Employee Details";
+            return View(model);
         }
 
         public IActionResult Privacy()
