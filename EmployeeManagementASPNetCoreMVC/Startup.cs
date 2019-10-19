@@ -60,6 +60,10 @@ namespace EmployeeManagementASPNetCoreMVC
                     name: "employee",
                     template: "Home/Details/{id?}");
 
+                routes.MapRoute(
+                    name: "insert_employee",
+                    template: "Home/InsertEmployee");
+
             });
         }
     }

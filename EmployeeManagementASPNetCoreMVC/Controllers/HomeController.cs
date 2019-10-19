@@ -29,6 +29,12 @@ namespace EmployeeManagementASPNetCoreMVC.Controllers
             return View(model);
         }
 
+        public IActionResult InsertEmployee()
+        {
+            employeeRepository.InsertEmployee();
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
