@@ -24,7 +24,7 @@ namespace EmployeeManagementASPNetCoreMVC.Models
             
         }
 
-        public List<Employee> GetAllEmployees()
+        public IEnumerable<Employee> GetAllEmployees()
         {
             using (IDbConnection connection = new SqlConnection(config.GetConnectionString("EmployeeDB")))
             {

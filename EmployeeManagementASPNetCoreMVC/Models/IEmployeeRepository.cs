@@ -8,7 +8,7 @@ namespace EmployeeManagementASPNetCoreMVC.Models
     public interface IEmployeeRepository
     {
         Employee GetById(int id);
-        List<Employee> GetAllEmployees();
+        IEnumerable<Employee> GetAllEmployees();
         void InsertEmployee();
 
     }
